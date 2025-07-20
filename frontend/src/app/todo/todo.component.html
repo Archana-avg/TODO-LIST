@@ -1,0 +1,38 @@
+<div class="todo-container">
+  <h1 class="title">TODO List</h1>
+
+  <div class="input-area">
+    <input
+      type="text"
+      [(ngModel)]="newTask"
+      placeholder="Enter a task"
+      (keyup.enter)="addTask()"
+    />
+    <button (click)="addTask()">Add</button>
+  </div>
+
+  <div class="task-list">
+    <div
+      class="task-card"
+      *ngFor="let task of tasks; let i = index"
+      [class.completed]="task.completed"
+    >
+      <div class="task-left" (click)="toggleTask(i)">
+        <input
+          type="checkbox"
+          class="tickbox"
+          [checked]="task.completed"
+          (change)="toggleTask(i)"
+        />
+        <span class="task-text">{{ task.title }}</span>
+      </div>
+
+      <div class="task-actions">
+        <span class="status-badge" [class.done]="task.completed" [class.pending]="!task.completed">
+          {{ task.completed ? ' Done' : 'Pending' }}
+        </span>
+        <button class="delete-btn" (click)="deleteTask(i)">🗑</button>
+      </div>
+    </div>
+  </div>
+</div>
