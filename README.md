@@ -8,4 +8,4 @@ Delete tasks,
 Data stored in MongoDB Atlas,
 Responsive and clean UI
 
-This app is ideal for learning full-stack development using MEAN technologies.
+
