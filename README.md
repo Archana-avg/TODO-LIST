@@ -47,7 +47,6 @@ ____________________________________
 - JSON – Data exchange format
 ____________________________________
 # Clone the Repository
-git clone https://github.com/archana-av/TODO-LIST.git
+https://github.com/archana-av/TODO-LIST.git
 
-cd TODO-LIST
 
